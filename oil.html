@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Oil Spills | OceanGuard</title>
+  <link rel="stylesheet" href="st.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="pollution-page">
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1><a href="main.html">🌊 OceanGuard</a></h1>
+      <nav class="nav">
+        <a href="main.html">Home</a>
+        <a href="main.html#dashboard">Dashboard</a>
+        <a href="main.html#register">Register</a>
+        <a href="main.html#actions">Volunteer Log</a>
+        <a href="main.html#fundraiser">Fundraiser</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="pollution-hero" style="background-image: url('https://maritime-intelligence.groupcls.com/wp-content/uploads/2023/12/oil-spill-at-sea.jpg');">
+    <div class="overlay">
+      <h2>Oil Spills: Lasting Scars on Our Oceans</h2>
+      <p>From tankers to rigs, oil spills devastate coastlines and marine life. Explore impacts, response efforts, and prevention.</p>
+      <a href="main.html#register" class="btn primary">Join the Movement</a>
+    </div>
+  </section>
+
+  <main class="container pollution-content">
+    <section>
+      <h3>🛢️ The Impact of Spills</h3>
+      <p>Oil coats birds and mammals, damages fish gills, and smothers habitats. Cleanup can take years and recovery even longer.</p>
+    </section>
+
+    <section>
+      <h3>🌊 Ecosystem Recovery</h3>
+      <p>Some species rebound over time, but sensitive habitats like marshes and mangroves can suffer long-term harm without restoration.</p>
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSh48SveQ6HCTglzwEttIJ5rWI4TCQhLHqMiQ&s" alt="Oil on water" class="pollution-img">
+    </section>
+
+    <section>
+      <h3>🧰 Prevention & Response</h3>
+      <ul>
+        <li>Stronger regulations and vessel maintenance reduce risk.</li>
+        <li>Rapid response and community reporting limit damage.</li>
+        <li>Support organizations advancing clean energy and safer transport.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h3>🔎 Did You Know?</h3>
+      <p>Small, chronic spills from everyday activity add up and can exceed the impact of single large disasters over time.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> OceanGuard — Protecting coasts and communities.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
+
+

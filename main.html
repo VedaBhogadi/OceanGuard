@@ -1,0 +1,334 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>OceanGuard — Marine Awareness & Volunteer Tracker</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="st.css" />
+</head>
+<body>
+
+  <!-- 🌊 Background Carousel -->
+  <div class="background-carousel">
+    <div class="bg-slide active" style="background-image: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRXMwD6laU6l_rAsoanq27JolpM-uAOJzyu0pltcCwO0aOi5f4J0v0veLjfx50Eo6Ek-1o&usqp=CAU');"></div>
+    <div class="bg-slide" style="background-image: url('https://static.vecteezy.com/system/resources/thumbnails/056/182/335/small/beauty-water-blue-photo.jpg');"></div>
+    <div class="bg-slide" style="background-image: url('https://static.vecteezy.com/system/resources/thumbnails/065/613/931/small/clear-blue-ocean-waves-and-foam-close-up-horizontal-seascape-photo.jpg');"></div>
+    <div class="bg-slide" style="background-image: url('https://i.natgeofe.com/n/9256e809-0507-455d-8bf6-a86a65a94eac/18359.jpg');"></div>
+  </div>
+
+  <!-- 🧭 Header Navigation -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1>🌊 OceanGuard</h1>
+      <nav class="nav">
+        <a href="#home">Home</a>
+        <a href="#dashboard">Dashboard</a>
+        <a href="#register">Volunteer Registration</a>
+        <a href="#actions">Volunteer Action Log</a>
+        <a href="#fundraiser">Fundraiser</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- 🌎 Home Section -->
+  <section id="home" class="home-section">
+    <div class="home-content">
+      <h2>Protecting Our Oceans, Protecting Our Future</h2>
+      <p>
+        Every year, over 8 million tons of plastic waste end up in the ocean — threatening marine life, ecosystems, and human health. 
+        OceanGuard empowers individuals to learn, act, and create a cleaner, healthier blue planet.
+      </p>
+    </div>
+
+    <div class="problems-grid">
+      <div class="problem-card">
+        <img src="https://createdigital.org.au/wp-content/uploads/2024/06/Ocean-plastics_Getty1474788417-170667-low.png" alt="Plastic Pollution">
+        <h3>🧴 Plastic Pollution</h3>
+        <p>Millions of tons of plastic debris choke marine life, damage coral reefs, and enter our food chain through fish and sea salt.</p>
+        <a href="plastic.html" class="btn learn-btn">Learn More</a>
+
+      </div>
+      <div class="problem-card">
+        <img src="https://imgs.mongabay.com/wp-content/uploads/sites/20/2015/10/03145859/Coral-bleaching-722-scaled.jpg" alt="Coral Bleaching">
+        <h3>🐠 Coral Bleaching</h3>
+        <p>Rising ocean temperatures cause coral reefs to lose their color and vitality, destroying homes for countless marine species.</p>
+                <a href="coral.html" class="btn learn-btn">Learn More </a>
+
+      </div>
+      <div class="problem-card">
+        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSh48SveQ6HCTglzwEttIJ5rWI4TCQhLHqMiQ&s" alt="Oil Spills">
+        <h3>🛢️ Oil Spills</h3>
+        <p>Oil spills suffocate marine species, coat coastlines, and disrupt ecosystems for decades — often with irreversible consequences.</p>
+                        <a href="oil.html" class="btn learn-btn">Learn More </a>
+
+      </div>
+      <div class="problem-card">
+        <img src="https://www.oceans-research.com/wp-content/uploads/2024/07/How-Overfishing-Threatens-Ocean-Sustainability.jpg" alt="Overfishing">
+        <h3>🎣 Overfishing</h3>
+        <p>Unsustainable fishing practices deplete fish populations and destroy marine biodiversity, pushing species toward extinction.</p>
+         <a href="overfishing.html" class="btn learn-btn">Learn More</a>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- 📊 Dashboard -->
+  <main class="container">
+    <section id="dashboard" class="card">
+      <h2>Ocean & Plastic Waste Facts</h2>
+      <div class="facts-header">
+      <div class="fact-highlight" id="factHighlight">Loading fact…</div>
+      <button id="nextFactBtn" class="btn">New Fact</button>
+      </div>
+
+
+      <div class="stats-grid">
+        <div class="stat">
+          <div class="stat-number" id="plasticPerYear">8M+</div>
+          <div class="stat-label">Million tons plastic/year</div>
+        </div>
+        <div class="stat">
+          <div class="stat-number" id="recyclingRate">10%</div>
+          <div class="stat-label">Global plastic recycling rate</div>
+        </div>
+        <div class="stat">
+          <div class="stat-number" id="marineSpecies">700+</div>
+          <div class="stat-label">Marine species affected</div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 🪸 Volunteer Registration -->
+    <section id="register" class="card">
+      <h2>Volunteer Registration</h2>
+      <form id="registrationForm" class="grid-form">
+        <label>
+          Full Name
+          <input type="text" id="regName" placeholder="Jane Doe" required>
+        </label>
+        <label>
+          Email
+          <input type="email" id="regEmail" placeholder="jane@example.com" required>
+        </label>
+        <label>
+          Location
+          <input type="text" id="regLocation" placeholder="City, Country">
+        </label>
+        <label>
+          Interests
+          <input type="text" id="regInterests" placeholder="Beach cleanup, awareness, research">
+        </label>
+        <button type="submit" class="btn primary">Register</button>
+      </form>
+      <div id="registrationMsg" class="success-msg" role="status" aria-live="polite"></div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Name</th>
+              <th>Email</th>
+              <th>Location</th>
+              <th>Interests</th>
+              <th>Joined</th>
+            </tr>
+          </thead>
+          <tbody id="volunteerTbody"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 🌱 Volunteer Action Log -->
+    <section id="actions" class="card">
+      <h2>Volunteer Action Log</h2>
+      <form id="actionForm" class="grid-form">
+        <label>
+          Action Type
+          <select id="actionType" required>
+            <option value="beach_cleanup">Beach Cleanup</option>
+            <option value="plastic_reduction">Plastic Reduction</option>
+            <option value="awareness_post">Awareness Post</option>
+            <option value="community_event">Community Event</option>
+          </select>
+        </label>
+        <label>
+          Description
+          <input type="text" id="actionDesc" placeholder="What did you do?" required>
+        </label>
+        <label>
+          Minutes Spent
+          <input type="number" id="actionMinutes" min="0" step="1" value="30" required>
+        </label>
+        <label>
+          Date
+          <input type="date" id="actionDate">
+        </label>
+        <button type="submit" class="btn primary">Log Action</button>
+      </form>
+      <div class="impact">
+        <div class="impact-item">
+          <div>Total Points</div>
+          <div class="impact-number" id="totalPoints">0</div>
+        </div>
+        <div class="impact-item">
+          <div>Badges</div>
+          <div id="badges" class="badges"></div>
+        </div>
+      </div>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Date</th>
+              <th>Type</th>
+              <th>Description</th>
+              <th>Minutes</th>
+              <th>Points</th>
+            </tr>
+          </thead>
+          <tbody id="actionsTbody"></tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- 💧 Fundraiser -->
+    <section id="fundraiser" class="card">
+      <h2>Fundraiser — Clean Our Oceans</h2>
+      <div class="progress">
+        <div class="progress-top">
+          <div>
+            <div class="progress-label">Raised</div>
+            <div class="progress-number" id="raisedAmount">$0</div>
+          </div>
+          <div class="progress-spacer"></div>
+          <div>
+            <div class="progress-label">Goal</div>
+            <div class="progress-number" id="goalAmount">$10,000</div>
+          </div>
+        </div>
+        <div class="progress-bar" aria-label="fundraiser progress">
+          <div id="progressFill" class="progress-fill" style="width: 0%"></div>
+        </div>
+      </div>
+      <form id="donationForm" class="grid-form">
+        <label>
+          Name (optional)
+          <input type="text" id="donorName" placeholder="John">
+        </label>
+        <label>
+          Amount (USD)
+          <input type="number" id="donationAmount" min="1" step="1" placeholder="25" required>
+        </label>
+        <button type="submit" class="btn primary">Donate</button>
+      </form>
+      <div class="table-wrap">
+        <table>
+          <thead>
+            <tr>
+              <th>Donor</th>
+              <th>Amount</th>
+              <th>Date</th>
+            </tr>
+          </thead>
+          <tbody id="donationsTbody"></tbody>
+        </table>
+      </div>
+    </section>
+  </main>
+<!-- 🤝 Help & Get Involved -->
+<section id="help" class="card help-section">
+  <h2>💬 Need Help or Want to Get Involved?</h2>
+  <p>
+    Whether you’re looking to organize a cleanup, donate, or spread awareness — we’re here to help! 
+    Connect with us or explore more ways to make an impact.
+  </p>
+
+  <div class="help-grid">
+    <div class="help-card">
+      <h3>🌊 Join a Cleanup</h3>
+      <p>Find nearby beach or river cleanups and join volunteers protecting marine life.</p>
+      <a href="#register" class="btn learn-btn">Become a Volunteer</a>
+    </div>
+
+    <div class="help-card">
+      <h3>💌 Contact Us</h3>
+      <p>Have questions or suggestions? We’d love to hear from you!</p>
+      <a href="mailto:oceanguardteam@gmail.com" class="btn learn-btn">Email Us</a>
+    </div>
+
+    <div class="help-card">
+      <h3>📚 Learn More</h3>
+      <p>Read about ocean sustainability, marine ecosystems, and how small actions matter.</p>
+      <a href="plastic.html" class="btn learn-btn">Explore Resources</a>
+    </div>
+  </div>
+</section>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> OceanGuard — Built for marine awareness and action.</p>
+    </div>
+  </footer>
+
+  <script src="ap.js"></script>
+  <button class="help-btn" id="helpBtn" aria-label="Help">?</button>
+  <div class="help-modal" id="helpModal" aria-hidden="true">
+    <div class="help-dialog" role="dialog" aria-modal="true" aria-labelledby="helpTitle">
+      <button class="help-close" id="helpClose" aria-label="Close">×</button>
+      <h3 id="helpTitle">Need help?</h3>
+      <p>Ask a question or pick an option:</p>
+      <div class="help-options">
+        <button class="chip" data-question="How to register?">How to register?</button>
+        <button class="chip" data-question="How to log an action?">How to log an action?</button>
+        <button class="chip" data-question="How to donate?">How to donate?</button>
+        <button class="chip" data-question="Learn about issues">Learn about issues</button>
+      </div>
+      <label class="help-input-label">Your question
+        <input type="text" id="helpInput" placeholder="Type your question...">
+      </label>
+      <button class="btn primary" id="helpAsk">Ask</button>
+      <div class="help-answer" id="helpAnswer"></div>
+    </div>
+  </div>
+  <script>
+    (function(){
+      const modal = document.getElementById('helpModal');
+      const btn = document.getElementById('helpBtn');
+      const closeBtn = document.getElementById('helpClose');
+      const askBtn = document.getElementById('helpAsk');
+      const input = document.getElementById('helpInput');
+      const answer = document.getElementById('helpAnswer');
+      const chips = document.querySelectorAll('.help-options .chip');
+
+      const responses = {
+        'register': 'Go to Volunteer Registration and fill in your details, then click Register. Or jump there now: <a href="#register">Open Registration</a>.',
+        'log an action': 'Open Volunteer Action Log, choose type, describe it, set minutes/date, then click Log Action. Jump there: <a href="#actions">Open Action Log</a>.',
+        'donate': 'Scroll to Fundraiser, enter amount and (optional) name, then click Donate. Jump there: <a href="#fundraiser">Open Fundraiser</a>.',
+        'issues': 'Learn more via the cards above. Plastic, Coral Bleaching, Oil Spills, and Overfishing pages provide details.'
+      };
+
+      function openModal(){ modal.classList.add('open'); modal.setAttribute('aria-hidden','false'); input.focus(); }
+      function closeModal(){ modal.classList.remove('open'); modal.setAttribute('aria-hidden','true'); answer.innerHTML=''; input.value=''; }
+      function reply(q){
+        const text = (q || '').toLowerCase();
+        let res = '';
+        if(text.includes('register')) res = responses['register'];
+        else if(text.includes('action') || text.includes('log')) res = responses['log an action'];
+        else if(text.includes('donate') || text.includes('fund')) res = responses['donate'];
+        else if(text.includes('issue') || text.includes('learn')) res = responses['issues'];
+        else res = 'I can help with registration, logging actions, donations, and learning issues. Try asking about one of those.';
+        answer.innerHTML = res;
+      }
+
+      btn.addEventListener('click', openModal);
+      closeBtn.addEventListener('click', closeModal);
+      modal.addEventListener('click', (e)=>{ if(e.target === modal) closeModal(); });
+      document.addEventListener('keydown', (e)=>{ if(e.key==='Escape' && modal.classList.contains('open')) closeModal(); });
+      askBtn.addEventListener('click', ()=> reply(input.value.trim()));
+      chips.forEach(ch => ch.addEventListener('click', ()=> reply(ch.getAttribute('data-question'))));
+    })();
+  </script>
+</body>
+</html>

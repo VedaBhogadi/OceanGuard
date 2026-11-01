@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Coral Bleaching | OceanGuard</title>
+  <link rel="stylesheet" href="st.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="pollution-page">
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1><a href="main.html">🌊 OceanGuard</a></h1>
+      <nav class="nav">
+        <a href="main.html">Home</a>
+        <a href="main.html#dashboard">Dashboard</a>
+        <a href="main.html#register">Register</a>
+        <a href="main.html#actions">Volunteer Log</a>
+        <a href="main.html#fundraiser">Fundraiser</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="pollution-hero" style="background-image: url('https://www.barrierreef.org/generated/1280w-3-2/tantabidisanctuariandrangersi25bleachingevent-bluemediaexmouth-12-jpg.jpg?1743054311');">
+    <div class="overlay">
+      <h2>Coral Bleaching: Reefs in Peril</h2>
+      <p>Warming oceans are causing corals to expel the algae they rely on for life, turning reefs white and lifeless. Learn the causes and how to help.</p>
+      <a href="main.html#register" class="btn primary">Join the Movement</a>
+    </div>
+  </section>
+
+  <main class="container pollution-content">
+    <section>
+      <h3>🌡️ What Causes Coral Bleaching?</h3>
+      <p>Bleaching occurs when corals are stressed by heat, pollution, or acidification and expel the symbiotic algae (zooxanthellae) that give them color and energy.</p>
+    </section>
+
+    <section>
+      <h3>🐠 Why It Matters</h3>
+      <p>Coral reefs support about <strong>25% of marine life</strong> and protect coastlines. Bleached reefs are more vulnerable to disease and can collapse if stress continues.</p>
+      <img src="https://imgs.mongabay.com/wp-content/uploads/sites/20/2015/10/03145859/Coral-bleaching-722-scaled.jpg" alt="Bleached coral" class="pollution-img">
+    </section>
+
+    <section>
+      <h3>✅ How You Can Help</h3>
+      <ul>
+        <li>Support climate action to reduce greenhouse gas emissions.</li>
+        <li>Avoid polluting runoff and choose reef-safe sunscreens.</li>
+        <li>Volunteer with reef monitoring and restoration programs.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h3>📈 Key Facts</h3>
+      <p>Mass bleaching events are increasing in frequency. Without action, many reefs may not recover, threatening biodiversity and food security.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> OceanGuard — Together for resilient reefs.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
+
+

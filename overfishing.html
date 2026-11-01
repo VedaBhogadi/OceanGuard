@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Overfishing | OceanGuard</title>
+  <link rel="stylesheet" href="st.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+</head>
+<body class="pollution-page">
+  <header class="site-header">
+    <div class="container header-inner">
+      <h1><a href="main.html">🌊 OceanGuard</a></h1>
+      <nav class="nav">
+        <a href="main.html">Home</a>
+        <a href="main.html#dashboard">Dashboard</a>
+        <a href="main.html#register">Register</a>
+        <a href="main.html#actions">Volunteer Log</a>
+        <a href="main.html#fundraiser">Fundraiser</a>
+      </nav>
+    </div>
+  </header>
+
+  <section class="pollution-hero" style="background-image: url('https://assets.worldwildlife.org/www-prd/images/wwfcmsprodimagesFishi.2e16d0ba.format-webp.fill-660x660.webp');">
+    <div class="overlay">
+      <h2>Overfishing: A Threat to Ocean Balance</h2>
+      <p>Unsustainable fishing reduces stocks, harms habitats, and disrupts food webs. Learn solutions and actions you can take.</p>
+      <a href="main.html#register" class="btn primary">Join the Movement</a>
+    </div>
+  </section>
+
+  <main class="container pollution-content">
+    <section>
+      <h3>🎣 What Is Overfishing?</h3>
+      <p>When fish are caught faster than they can reproduce, populations decline. Bycatch and destructive gear amplify the damage.</p>
+    </section>
+
+    <section>
+      <h3>🌐 Global Impacts</h3>
+      <p>Overfishing threatens food security and livelihoods, especially in coastal communities. Ecosystems lose resilience as key species vanish.</p>
+      <img src="https://www.oceans-research.com/wp-content/uploads/2024/07/How-Overfishing-Threatens-Ocean-Sustainability.jpg" alt="Fishing nets" class="pollution-img">
+    </section>
+
+    <section>
+      <h3>🛡️ Solutions</h3>
+      <ul>
+        <li>Support sustainable seafood and certified fisheries.</li>
+        <li>Protect habitats with marine reserves and better gear.</li>
+        <li>Advocate for science-based catch limits and enforcement.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h3>📊 By the Numbers</h3>
+      <p>A significant share of global fish stocks are overexploited. Recovery is possible with coordinated management and reduced pressure.</p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container">
+      <p>© <span id="year"></span> OceanGuard — For thriving oceans.</p>
+    </div>
+  </footer>
+
+  <script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+</body>
+</html>
+
+

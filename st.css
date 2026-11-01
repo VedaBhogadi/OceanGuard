@@ -1,0 +1,655 @@
+/* === OCEANGUARD THEME === */
+:root {
+  --primary: #00bcd4;
+  --secondary: #0077b6;
+  --dark: #021b34;
+  --light: #e0f7fa;
+  --white: #ffffff;
+  --card-bg: rgba(255, 255, 255, 0.07);
+  --blur-bg: rgba(255, 255, 255, 0.05);
+  --shadow: 0 4px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* ===== GLOBAL ===== */
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background: radial-gradient(circle at 20% 30%, #012b43, #00111c);
+  color: var(--light);
+  scroll-behavior: smooth;
+  overflow-x: hidden;
+}
+
+/* ===== HEADER ===== */
+.site-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background: linear-gradient(90deg, rgba(0, 20, 40, 0.95), rgba(0, 60, 90, 0.95));
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 20px rgba(0, 0, 0, 0.5);
+  z-index: 1000;
+}
+
+.header-inner {
+  width: 90%;
+  margin: auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 0;
+}
+
+h1 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  background: linear-gradient(90deg, #00eaff, #0077b6);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 1px;
+}
+
+.nav {
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav a {
+  color: var(--light);
+  text-decoration: none;
+  font-weight: 600;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.nav a::after {
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background: var(--primary);
+  transition: 0.3s;
+}
+
+.nav a:hover {
+  color: var(--primary);
+}
+
+.nav a:hover::after {
+  width: 100%;
+}
+
+/* ===== HERO ===== */
+.hero-section {
+  background: url("https://images.unsplash.com/photo-1507525428034-b723cf961d3e?auto=format&fit=crop&w=1600&q=80") center/cover no-repeat;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  position: relative;
+}
+
+.hero-overlay {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 50px;
+  border-radius: 15px;
+  box-shadow: var(--shadow);
+}
+
+.hero-overlay h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--light);
+  margin-bottom: 10px;
+}
+
+.hero-overlay p {
+  font-size: 1.1rem;
+  margin-bottom: 20px;
+  color: #b8e1ff;
+}
+
+.btn {
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: var(--white);
+  border: none;
+  padding: 12px 24px;
+  border-radius: 30px;
+  cursor: pointer;
+  font-weight: 600;
+  transition: 0.3s ease;
+  box-shadow: 0 0 15px rgba(0, 188, 212, 0.3);
+}
+
+.btn:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 20px rgba(0, 188, 212, 0.5);
+}
+
+/* ===== CARDS ===== */
+main {
+  margin-top: 90px;
+}
+
+.card {
+  width: 85%;
+  margin: 60px auto;
+  background: var(--card-bg);
+  backdrop-filter: blur(10px);
+  border-radius: 15px;
+  box-shadow: var(--shadow);
+  padding: 30px;
+  transition: all 0.4s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 25px rgba(0, 200, 255, 0.25);
+}
+
+.card h2 {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: var(--primary);
+  font-size: 1.6rem;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.08);
+  padding-bottom: 10px;
+  margin-bottom: 25px;
+}
+
+/* ===== STATS GRID ===== */
+.stats-grid {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  margin-top: 25px;
+}
+
+.stat {
+  text-align: center;
+  background: var(--blur-bg);
+  padding: 20px 30px;
+  border-radius: 12px;
+  min-width: 160px;
+  box-shadow: 0 0 10px rgba(0, 255, 255, 0.1);
+}
+
+.stat-number {
+  font-size: 1.8rem;
+  color: var(--primary);
+  font-weight: 700;
+}
+
+/* ===== FORMS ===== */
+.grid-form {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+input, select {
+  flex: 1;
+  padding: 10px 15px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.1);
+  color: var(--light);
+  font-size: 0.95rem;
+  transition: 0.3s;
+}
+
+input:focus, select:focus {
+  outline: none;
+  border-color: var(--primary);
+  box-shadow: 0 0 10px rgba(0, 188, 212, 0.3);
+}
+
+/* ===== TABLES ===== */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+  color: #e8faff;
+}
+
+th, td {
+  padding: 10px;
+  text-align: center;
+}
+
+th {
+  background: rgba(0, 188, 212, 0.2);
+  color: var(--white);
+  text-transform: uppercase;
+}
+
+tr:nth-child(even) {
+  background: rgba(255, 255, 255, 0.05);
+}
+
+/* ===== PROGRESS BAR ===== */
+.progress {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  height: 15px;
+  margin: 15px 0;
+  overflow: hidden;
+}
+
+.progress-fill {
+  background: linear-gradient(90deg, var(--primary), #00e0ff);
+  height: 100%;
+  border-radius: 12px;
+  transition: width 0.5s ease-in-out;
+}
+
+/* ===== FOOTER ===== */
+.site-footer {
+  background: rgba(0, 15, 30, 0.95);
+  text-align: center;
+  padding: 25px;
+  color: #b3ecff;
+  font-size: 0.9rem;
+  letter-spacing: 0.5px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 768px) {
+  .grid-form {
+    flex-direction: column;
+  }
+  .stats-grid {
+    flex-direction: column;
+    gap: 20px;
+  }
+  .hero-overlay h2 {
+    font-size: 2rem;
+  }
+}
+/* 🌊 Background Carousel */
+.background-carousel {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -2;
+}
+
+.bg-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  opacity: 0;
+  transition: opacity 2s ease-in-out;
+}
+
+.bg-slide.active {
+  opacity: 1;
+}
+
+/* Optional: ocean tint overlay for readability */
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(0, 20, 40, 0.6), rgba(0, 0, 30, 0.8));
+  z-index: -1;
+}
+/* 🌊 Background Carousel */
+.background-carousel {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  z-index: -2;
+}
+
+.bg-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-position: center;
+  background-size: cover;
+  opacity: 0;
+  transition: opacity 2s ease-in-out;
+}
+
+.bg-slide.active {
+  opacity: 1;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(180deg, rgba(0, 20, 40, 0.6), rgba(0, 0, 30, 0.8));
+  z-index: -1;
+}
+/* 🌊 Home Section Styling */
+.home-section {
+  padding: 6rem 2rem 4rem;
+  text-align: center;
+  color: #fff;
+  position: relative;
+  z-index: 1;
+  background: rgba(0, 20, 40, 0.5);
+  backdrop-filter: blur(5px);
+  border-radius: 1.5rem;
+  margin: 2rem auto;
+  max-width: 1200px;
+}
+
+.home-content h2 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.home-content p {
+  font-size: 1.1rem;
+  max-width: 800px;
+  margin: 0 auto 2rem;
+  line-height: 1.6;
+}
+
+/* 💧 Problems Grid */
+.problems-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.problem-card {
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border-radius: 1rem;
+  padding: 1rem;
+  text-align: left;
+  color: #f0f9ff;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.problem-card:hover {
+  transform: translateY(-8px);
+  background: rgba(255, 255, 255, 0.2);
+}
+
+.problem-card img {
+  width: 100%;
+  border-radius: 0.8rem;
+  margin-bottom: 1rem;
+  height: 170px;
+  object-fit: cover;
+}
+
+.problem-card h3 {
+  font-size: 1.2rem;
+  color: #00d4ff;
+  margin-bottom: 0.5rem;
+}
+
+.problem-card p {
+  font-size: 0.95rem;
+  color: #e6f7ff;
+  line-height: 1.5;
+}
+/* 🌊 Fact Fade Animation */
+#factHighlight {
+  transition: opacity 0.8s ease;
+  opacity: 1;
+}
+
+#factHighlight.fade-in {
+  opacity: 1;
+  animation: fade 1s ease;
+}
+
+@keyframes fade {
+  0% { opacity: 0; transform: translateY(10px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+/* 🌊 Facts Section Layout */
+.facts-header {
+  display: flex;
+  justify-content: space-between; /* pushes fact text to left, button to right */
+  align-items: center;
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+  flex-wrap: wrap; /* keeps layout responsive */
+}
+
+#factHighlight {
+  flex: 1;
+  font-size: 1.1rem;
+  color: #ffffff;
+  line-height: 1.5;
+  animation: fadeIn 1s ease;
+}
+
+#nextFactBtn {
+  background: linear-gradient(135deg, #00bcd4, #007bff);
+  color: #fff;
+  font-weight: 600;
+  border: none;
+  border-radius: 25px;
+  padding: 10px 22px;
+  cursor: pointer;
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+#nextFactBtn:hover {
+  transform: scale(1.08);
+  background: linear-gradient(135deg, #02c4cc, #0099ff);
+}
+
+/* ✨ Smooth Fact Fade Animation */
+@keyframes fadeIn {
+  0% { opacity: 0; transform: translateY(10px); }
+  100% { opacity: 1; transform: translateY(0); }
+}
+/* 🌊 Plastic Pollution Page Styling */
+.pollution-page {
+  background: linear-gradient(to bottom right, #013A63, #011f3f);
+  color: #f0f9ff;
+  font-family: 'Inter', sans-serif;
+}
+
+.pollution-hero {
+  position: relative;
+  background: url('https://images.squarespace-cdn.com/content/v1/5b80290bee1759a50e3a86b3/1623768698900-7U9KIM71DW2EAF3FMXUK/sea-turtle-with-plastic-ben-j-hicks.jpg') center/cover no-repeat;
+  height: 80vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.pollution-hero .overlay {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 40px;
+  border-radius: 20px;
+  text-align: center;
+  color: #fff;
+  max-width: 800px;
+}
+
+.pollution-hero h2 {
+  font-size: 2.4rem;
+  color: #00c4cc;
+}
+
+.pollution-hero p {
+  margin: 1rem 0;
+  line-height: 1.6;
+  font-size: 1.1rem;
+}
+
+.pollution-img {
+  width: 100%;
+  border-radius: 15px;
+  margin: 20px 0;
+  box-shadow: 0 0 20px rgba(0, 255, 255, 0.3);
+}
+
+.pollution-content h3 {
+  color: #00e1ff;
+  margin-top: 30px;
+}
+
+.pollution-content ul {
+  margin-left: 20px;
+  list-style-type: "🌿 ";
+  line-height: 1.8;
+}
+
+.pollution-content section {
+  margin-bottom: 30px;
+}
+
+.btn.primary {
+  background: linear-gradient(90deg, #00bcd4, #007bff);
+  color: white;
+  border: none;
+  padding: 12px 25px;
+  border-radius: 25px;
+  font-weight: 600;
+  cursor: pointer;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn.primary:hover {
+  background: linear-gradient(90deg, #02e1d5, #009cff);
+  transform: scale(1.05);
+}
+/* 🌊 Fix Plastic Pollution Button Layout */
+.learn-btn {
+  display: inline-block;
+  background: linear-gradient(135deg, #00bcd4, #007bff);
+  color: #fff;
+  font-weight: 600;
+  text-decoration: none;
+  border: none;
+  border-radius: 30px;
+  padding: 12px 22px;
+  white-space: normal; /* allow wrapping */
+  text-wrap: balance; /* nicer multi-line balance (supported in modern browsers) */
+  line-height: 1.2;
+  font-size: 0.95rem;
+  margin-top: 10px;
+  text-align: center;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 15px rgba(0, 188, 212, 0.3);
+  max-width: fit-content;
+}
+
+.learn-btn:hover {
+  transform: scale(1.05);
+  background: linear-gradient(135deg, #02d3e7, #0099ff);
+  box-shadow: 0 4px 20px rgba(0, 188, 212, 0.5);
+}
+
+.problem-card .learn-btn {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+  margin-top: 1rem;
+}
+/* Make form buttons fit their containers */
+.grid-form .btn {
+  display: block;
+  width: 100%;
+  box-sizing: border-box;
+}
+/* ===== HELP WIDGET ===== */
+.help-btn {
+  position: fixed;
+  right: 20px;
+  bottom: 20px;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--primary), var(--secondary));
+  color: #fff;
+  border: none;
+  font-weight: 800;
+  cursor: pointer;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.35);
+  z-index: 1100;
+}
+
+.help-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.55);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 1101;
+}
+.help-modal.open { display: flex; }
+
+.help-dialog {
+  width: min(560px, 92%);
+  background: var(--card-bg);
+  backdrop-filter: blur(10px);
+  border-radius: 16px;
+  box-shadow: var(--shadow);
+  padding: 20px 20px 16px;
+  color: var(--light);
+  position: relative;
+}
+.help-close {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+}
+.help-options { display: flex; flex-wrap: wrap; gap: 8px; margin: 10px 0 12px; }
+.help-options .chip {
+  background: rgba(255,255,255,0.1);
+  border: 1px solid rgba(255,255,255,0.15);
+  color: #eaf9ff;
+  border-radius: 999px;
+  padding: 6px 12px;
+  cursor: pointer;
+}
+.help-input-label { display: block; margin: 8px 0; font-size: 0.95rem; }
+.help-input-label input {
+  width: 100%;
+  margin-top: 6px;
+  padding: 10px 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(255,255,255,0.2);
+  background: rgba(255,255,255,0.08);
+  color: var(--light);
+}
+.help-answer { margin-top: 12px; background: rgba(255,255,255,0.06); padding: 12px; border-radius: 10px; }
+
